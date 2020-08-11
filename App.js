@@ -1,17 +1,16 @@
-//import { StatusBar } from 'expo-status-bar';
 import {React,useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {Home, Calculator, WebSite, Article} from './src/screens'
-
-
+import {Home} from './src/screens/Home';
+import {Calculator} from './src/screens/Calculator';
+import {WebSite} from './src/screens/WebSite';
+import {Article} from './src/screens/Article';
+import Main from './src/screens/MainScreen';
 
 export default function App() {
+ 
+  let screen = <Home></Home>;
 
-  const [{status},SetStatus]=useState("0")
-  
-  let screen = <Home></Home>
-
-  switch (status)
+  switch (Main.GetStatus())
   {
   case "0": 
    screen = <Home></Home>
@@ -24,29 +23,14 @@ export default function App() {
   default:
    screen = <Home></Home>
   } 
-
-
-
-
-
-
-
+  
   return (
+
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    {screen} 
     </View>
+  
   );
-
-
-
-
-
-
-
-
-
-
 
 
 }

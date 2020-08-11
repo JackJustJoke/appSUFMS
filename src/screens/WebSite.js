@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import View from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import {FootBar} from '../elements/FootBar';
 
-export default function App() {
+export const WebSite = props => 
+{
   return (
     <View style={styles.container}>
+      <FootBar></FootBar>
     </View>
   );
 }
@@ -12,7 +15,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#f00',
     alignItems: 'center',
     justifyContent: 'center',
   },

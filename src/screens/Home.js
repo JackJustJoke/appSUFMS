@@ -1,9 +1,11 @@
 import React from 'react';
-import View from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import {FootBar} from '../elements/FootBar';
 
-export default function App() {
+export const Home = props =>  {
   return (
     <View style={styles.container}>
+    <FootBar></FootBar>
     </View>
   );
 }
@@ -11,7 +13,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
